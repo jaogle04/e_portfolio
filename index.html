@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James Ogle E-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Oswald Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!--  -->
+  <style>
+    html {
+      font-family: "Oswald", sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+    }
+    .container {
+      display: flexbox;
+      flex-direction: row;
+    }
+    /* Header Section */
+    .header {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 15px;
+      padding-top: 15px;
+      align-items: center;
+      justify-content: center;
+      background-color: #ff8200; /*cbcbcb light gray color*/
+      color: white;
+      /* background-color: #cbcbcb;
+      color: black; */
+      border-bottom: 4px solid #ff8200;
+      width: 100%;
+      height: auto;
+    }
+    .main-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 300px;
+      background-color: white;
+      color: black;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      padding: 15px;
+      box-shadow: 0.3rem 0.3rem 0.5rem black;
+      overflow: hidden;
+      border-radius: 1%;
+    }
+    .main-sub-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: auto;
+      text-align: center;
+    }
+    /* #purpose-statement {
+      font-size: 18px;
+    } */
+    h1 {
+      font-size: 6rem;
+    }
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+    #profile-img {
+      margin-right: 20px;
+      border-radius: 50%;
+      border: 2px solid black;
+    }
+    /* Main Content */
+    .main-content {
+      display: grid;
+      grid-template-columns: 0.75fr 3fr;
+      gap: 15px;
+      position: relative;
+    }
+    .content {
+      font-family: sans-serif;
+    }
+    span {
+      font-weight: 700;
+    }
+    /*Info Section*/
+    .left-column {
+      margin-left: 5%;
+    }
+    ul > li {
+      margin-top: 0;
+      margin-bottom: 10px;
+      /* padding-top: 0; */
+    }
+    ul > li > ul > li {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+    /* Project Section */
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    .sub-header {
+      font-size: 30px;
+      margin: 10px;
+    }
+    .project {
+      display: flex;
+      flex-direction: row;
+    }
+    .robot {
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 100px;
+    }
+    .circuit {
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      align-items: center;
+    }
+    .display {
+      display: flex;
+      width: 400px;
+      justify-content: center;
+      box-shadow: 0.1rem 0.1rem 0.3rem black;
+    }
+    .description {
+      width: 60%;
+    }
+    /* Footer section */
+    .footer {
+      border-top: 4px solid #ff8200;
+      color: black;
+      width: 100%;
+      position: relative;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .footer > p {
+      padding-left: 15px;
+    }
+    #big-orange-tag {
+      display: flex;
+      margin-top: 20px;
+      margin-left: 10px;
+      position: absolute;
+      left: 0;
+    }
+    /* Mobile Devices */
+    @media (max-width: 319px) {
+      h1 {
+        font-size: 3.3rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+      .main-header {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+      }
+      #profile-img {
+        height: 225px;
+      }
+      .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .left-column {
+        margin-left: 0;
+      }
+      .project {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    @media (min-width: 320px) and (max-width: 600px) {
+      h1 {
+        font-size: 3.3rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+      .main-header {
+        height: auto;
+        width: auto;
+      }
+      #profile-img {
+        height: 225px;
+      }
+      .main-content {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+      }
+      .left-column {
+        display: flex;
+        flex-direction: column;
+      }
+      .project {
+        display: flex;
+        flex-direction: column;
+      }
+      .robot {
+        align-items: left;
+      }
+      .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: right;
+      }
+    }
+    /* Ipad and Tablets */
+    @media (min-width: 601px) and (max-width: 1000px) {
+      h1 {
+        font-size: 3.3rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+      .main-header {
+        width: auto;
+        height: auto;
+      }
+      #profile-img {
+        height: 225px;
+      }
+      .project {
+        display: flex;
+        flex-direction: column;
+      }
+      .sub-header {
+        text-align: center;
+      }
+      .description {
+        width: 75%;
+      }
+    }
+    /* Laptops */
+    @media (min-width: 1201px) and (max-width: 1600px) {
+    }
+    /* Desktops */
+    @media (min-width: 1601px) {
+    }
+  </style>
+  <!--  -->
+  <body class="container">
+    <div class="header">
+      <div class="header-content">
+        <div class="main-header">
+          <img
+            id="profile-img"
+            src="./index_files/profile_pic.jpeg"
+            alt="headshot image of James Ogle in suit"
+            height="300px"
+          />
+          <h1>JAMES OGLE'S <br />PORTFOLIO</h1>
+        </div>
+      </div>
+      <div class="main-sub-header">
+        <div class="sub-header">
+          <h2>
+            CIVIL ENGINEERING STUDENT <br />
+            UNIVERSITY OF TENNESSEE
+          </h2>
+        </div>
+        <!-- <div id="purpose-statement">
+          <p>
+            I am a Sophomore at the University of Tennessee aiming to gain
+            knowledge and experience in the civil engineering field to become an
+            exceptional engineer
+          </p>
+        </div> -->
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="left-column">
+        <div class="sub-header"><h2>Info</h2></div>
+        <div class="content">
+          <ul>
+            <li><a href="./index_files/Resume.pdf">Resume</a></li>
+            <li>
+              Internships
+              <ul>
+                <li>
+                  <a href="https://foundationsystemsengineering.com/"
+                    >Foundation Systems Engineering</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              Engineering Coursework
+              <ul>
+                <li>EF230</li>
+                <li>EF152</li>
+                <li>ME202</li>
+              </ul>
+            </li>
+            <li>
+              Extracurriculars
+              <ul>
+                <li>Web Development</li>
+                <li>
+                  <a href="https://www.nsls.org/"
+                    >National Society of Leadership and Service</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="sub-header"><h2>Projects</h2></div>
+        <div class="project robot">
+          <div class="display">
+            <video
+              width="400px"
+              controls
+              alt="video displaying robot being controlled by keyboard and data taken from robot being displayed on laptop screen"
+            >
+              <source src="./index_files/robot_vid.MOV" />
+            </video>
+          </div>
+          <div class="description content">
+            <p><span>Name:</span> MATLAB Robot</p>
+            <p><span>Role:</span> Project Manager</p>
+            <p>
+              The focus of this project was to design a code using MATLAB that
+              would give directions to the robot. My team designed a remote to
+              control the robot while also displaying data on the laptop such as
+              speed and a video feed. The speed of the robot would be set
+              through an input on the screen and the directions of the robot
+              were controlled by the arrow keys on the keyboard. We then
+              presented the code and what would be the purpose of the robot in a
+              real-world scenerio and how it would be used.
+            </p>
+          </div>
+        </div>
+        <div class="project circuit">
+          <div class="display">
+            <img
+              id="circuit-img"
+              src="./index_files/circuits.jpg"
+              alt="arduino circuit board connected to multiple lightbulbs wrapped around PVC pipe"
+              width="400px"
+            />
+          </div>
+          <div class="description content">
+            <p><span>Name:</span> Circuit's Project</p>
+            <p>
+              This project used the knowledge of circuits that we had learned
+              recently over the course of a module in EF151. We used an Arduino
+              board for the mainframe of the connection and designed the code
+              through the Arduino IDE. We experienced many issues during this
+              project with supplies not coming in that strengthened our ability
+              to adapt to what we had and make it work. We designed a
+              “lightsaber” that basically involved a set delay system for the
+              lights using basic resistors and photoresistors.
+            </p>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div id="big-orange-tag">
+        <a href="https://www.utk.edu/"
+          ><img
+            src="./index_files/big_orange_tag.png"
+            width="200px"
+            alt="University of Tennesse website tag"
+          />
+        </a>
+      </div>
+      <p>
+        contact info: <br />
+        jogleswimmer@gmail.com <br />
+        (865) 228-1030
+      </p>
+    </div>
+  </body>
+</html>
